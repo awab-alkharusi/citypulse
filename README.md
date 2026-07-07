@@ -1,0 +1,6 @@
+py -c "
+content = open('README.md', 'w')
+content.write('''# CityPulse NYC 311 Analytics Dashboard\n\nAn AI-powered analytics dashboard built on 100,000+ real NYC 311 service requests. Ask questions in plain English and get instant SQL-powered answers with interactive charts.\n\n## Live Demo\n[View the app here](YOUR_STREAMLIT_URL_HERE)\n\n## What It Does\n- Visualizes complaint patterns across NYC boroughs, agencies, and complaint types\n- Lets users query the dataset in plain English\n- Automatically generates and executes SQL queries using Llama 3 via Groq API\n- Returns results as interactive charts and data tables\n\n## Tech Stack\n- Python\n- SQLite\n- Pandas\n- Plotly\n- Streamlit\n- Groq API and Llama 3 for text-to-SQL\n\n## How It Works\n1. User types a plain English question\n2. Question sent to Llama 3 via Groq API with database schema as context\n3. Model returns a valid SQL query\n4. Query runs against SQLite database of 100K NYC complaints\n5. Results return as a Pandas DataFrame\n6. Plotly renders a chart automatically\n7. Streamlit displays everything in the browser\n\n## Data Source\nNYC Open Data, 311 Service Requests 2024, 100,000 records\n''')
+content.close()
+print('Done')
+"
