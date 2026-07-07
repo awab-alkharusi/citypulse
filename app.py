@@ -16,7 +16,8 @@ def setup_database():
         import pandas as pd
         import sqlite3
         
-        print("Downloading data...")
+        st.info("Setting up database for first time... this takes about 30 seconds.")
+        
         url = (
             "https://data.cityofnewyork.us/resource/erm2-nwe9.csv"
             "?$limit=100000"
@@ -41,7 +42,8 @@ def setup_database():
         conn = sqlite3.connect("citypulse.db")
         df.to_sql("complaints", conn, if_exists="replace", index=False)
         conn.close()
-        print("Database ready.")
+        st.success("Database ready! Reloading...")
+        st.rerun()
 
 setup_database()
 
