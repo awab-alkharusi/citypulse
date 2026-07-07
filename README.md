@@ -3,7 +3,7 @@
 An AI-powered analytics dashboard built on 100,000+ real NYC 311 service requests. Ask questions in plain English and get instant SQL-powered answers with interactive charts.
 
 ## Live Demo
-View the app here: YOUR_STREAMLIT_URL_HERE
+[Click to view the app](https://awab-citypulse.streamlit.app)
 
 ## What It Does
 - Visualizes complaint patterns across NYC boroughs, agencies, and complaint types
