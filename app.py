@@ -55,7 +55,7 @@ Status values: Closed, Open, In Progress, Started, Assigned, Pending.
 Return ONLY valid SQLite SQL. No markdown, no backticks, no explanation. Use LIMIT 500 max.
 """
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[
             {"role": "system", "content": schema},
             {"role": "user", "content": f"Write SQL to answer: {user_question}"}
