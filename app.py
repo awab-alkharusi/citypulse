@@ -44,7 +44,8 @@ def get_connection():
     return sqlite3.connect("citypulse.db")
 
 def generate_sql(user_question):
-    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+    client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+    #client = Groq(api_key=os.getenv("GROQ_API_KEY"))
     schema = """
 You are a SQL expert. The database has one table called 'complaints' with these columns:
 unique_key, created_date, closed_date, agency, agency_name, complaint_type,
